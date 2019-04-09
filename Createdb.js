@@ -27,7 +27,7 @@ exports.createall = function () {
     if (err) throw err;
         console.log("Database created");
     });
-    
+    /*
     //Creates Chromechat
     var sql = "CREATE TABLE IF NOT EXISTS ChromeChat.CHATS (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, navn VARCHAR(300) NOT NULL)";
     
@@ -35,6 +35,6 @@ exports.createall = function () {
     if (err) throw err;
         console.log("Database created");
     });
-    
+    */
   return "done";
 };

@@ -15,6 +15,7 @@ var server = http.createServer(function(req,res){
             break;
         case '/admincdb':
             fs.createReadStream(__dirname + '/views/admincdb.html').pipe(res);
+            admincdb.createall();
             break;
         
     }
@@ -24,7 +25,6 @@ var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
     console.log('a user connected');
-    socket.emit('dbinput',admincdb.hi());
 });
 
 server.listen(port,function(){
