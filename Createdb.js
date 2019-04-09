@@ -1,24 +1,27 @@
 var mysql = require('mysql');
-
+var promise = require('promise');
+//defines the connection to localhost
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: ""
 });
 
+//connects to localhost
+con.connect(function(err) {
+if (err) throw err;
+    console.log("Database Connected!");
+});
 
-
+//just says hi used to test home-made modules
 exports.hi = function () {
   return "hi";
 };
 
+
+
+//creates database and tables if they dont exist
 exports.createall = function () {
-    
-    //connects to localhost
-    con.connect(function(err) {
-    if (err) throw err;
-        console.log("Database Connected!");
-    });
     
     //Creates Chromechat
     var sql = "CREATE DATABASE IF NOT EXISTS ChromeChat";

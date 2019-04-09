@@ -13,18 +13,10 @@
     </style>
   </head>
   <body>
-    <h1>Login</h1>
+    <h1>Create chat</h1>
     <ul id="messages"></ul>
-    <form method="POST" action = "/test/login">
-      <input id = "username" name="username" autocomplete="off" placeholder="username" />
-      <input id = "password" name="password" autocomplete="off" placeholder="password" />
-      <button id="submit">Send</button>
-    </form>
-    <h1>Sign up</h1>
-    <ul id="messages"></ul>
-    <form method="POST" action = "/test/signup">
-      <input id = "username" name="username" autocomplete="off" placeholder="username" />
-      <input id = "password" name="password" autocomplete="off" placeholder="password" />
+    <form method="POST" action = "/test/createchat">
+      <input id = "chatname" name="chatname" autocomplete="off" placeholder="Chatname" />
       <button id="submit">Send</button>
     </form>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
