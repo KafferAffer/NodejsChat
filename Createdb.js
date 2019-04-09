@@ -18,9 +18,40 @@ exports.hi = function () {
   return "hi";
 };
 
+<<<<<<< HEAD
 
 
 //creates database and tables if they dont exist
+=======
+exports.getUserFromId = function (var id) {
+    var sql = "SELECT USER.navn FROM ChromeChat.USER WHERE USER.id='".id."' LIMIT 1";
+    
+    con.query(sql, function (err, result) {
+    if (err) throw err;
+        console.log(result);
+        
+    return "WOW you got an ID: "+result;
+    });
+    
+};
+
+exports.checkIfUserBe = function (var name, password) {
+    var sql = "SELECT USER FROM ChromeChat.USER WHERE USER.navn='".name."' AND USER.password='".password."' LIMIT 1";
+    con.query(sql, function (err, result) {
+    if (err) throw err;
+        console.log(result);
+    if (results.length < 1){
+        
+    }else {
+        return "WOW you got a user: "+result;
+    }
+      
+        
+    });
+    
+}
+
+>>>>>>> f4afb28fc743ca81deedb43d9a46426951570b30
 exports.createall = function () {
     
     //Creates Chromechat
