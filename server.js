@@ -7,6 +7,7 @@ var port = process.env.PORT || 3000;
 var session = require('express-session');
 var admincdb = require('./Createdb');
 
+app.use(session({secret: 'CCS'}));
 
 var server = http.createServer(function(req,res){
     switch(req.url){
