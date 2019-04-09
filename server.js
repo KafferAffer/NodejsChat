@@ -23,10 +23,15 @@ app.get('/logged',function(req,res){
     res.write('youre logged in');
 });
 
+app.get('/admincdb',function(req,res){
+    res.write('grats');
+    admincdb.createall();
+});
+
 app.post('/test/login',function(req,res){
     var username = req.body.username
     console.log("username = " + username); 
-    //res.redirect('/logged');
+    res.redirect('/logged');
 });
 
 var io = socket(server);
