@@ -18,11 +18,8 @@ exports.hi = function () {
   return "hi";
 };
 
-<<<<<<< HEAD
-
 
 //creates database and tables if they dont exist
-=======
 exports.getUserFromId = function (var id) {
     var sql = "SELECT USER.navn FROM ChromeChat.USER WHERE USER.id='".id."' LIMIT 1";
     
@@ -51,7 +48,6 @@ exports.checkIfUserBe = function (var name, password) {
     
 }
 
->>>>>>> f4afb28fc743ca81deedb43d9a46426951570b30
 exports.createall = function () {
     
     //Creates Chromechat
